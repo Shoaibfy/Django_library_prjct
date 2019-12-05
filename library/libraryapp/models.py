@@ -10,7 +10,9 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    category_name=models.CharField(max_length=100,help_text="enter Book category")
+    category_name=models.CharField(max_length=100,help_text="enter Book category",verbose_name="Category")
+    class Meta:
+        verbose_name_plural="category"
 
 
     def __str__(self):
@@ -27,6 +29,7 @@ class Book(models.Model):
 
     def __str__(self):
         return self.book_name
+
 
 
 class Member(models.Model):
